@@ -1,0 +1,241 @@
+@font-face{
+  src: url('../font/Montserrat.ttf');
+  font-family: 'Montserrat';
+}
+@font-face{
+  src: url('../font/Raleway.ttf');
+  font-family: 'Raleway';
+}
+$primary: #3f51b5;
+$secondary: #53770b;
+$tertiary: #e65d5f;
+
+html {
+  scroll-behavior: smooth;
+}
+a {
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+body{
+  font-family: 'Raleway', sans-serif;
+}
+h1,h2,h3,h4,h5,h6{
+  font-family: 'Raleway', sans-serif;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: black;
+}
+.text{
+  font-weight: bold;
+}
+section{
+  padding: 20px 0;
+}
+.header{
+  padding: 3px 0;
+  .navbar{
+    box-shadow: none;
+    padding: 0;
+    .navbar-brand{
+      color: black;
+      font-size: 30px;
+      font-weight: bold;
+    }
+    .navbar-nav{
+      .nav-link.active{
+        color: $secondary;
+      }
+      .nav-item{
+        padding: 2px 5px;
+        font-weight: bold;
+        .nav-link{
+          color: black;
+          font-size: 15px;
+          transition: 0.3s ease-in-out;
+          &:hover{
+            color: $secondary;
+          }
+        }
+      }
+      .dropdown-menu{
+        display: none;
+        box-shadow: 0px 0px 30px rgb(127 137 161 / 25%);
+        .dropdown-item{
+          font-weight: bold;
+          &:hover{
+            background: transparent;
+            color: $primary;
+          }
+        }
+      }
+      .dropdown{
+        i{
+          margin-left: 5px;
+          font-size: 12px;
+        }
+      }
+      .dropdown:hover .dropdown-menu{
+        display: block;
+      }
+    }
+  }
+
+}
+.footer{
+  background: black;
+  height: 80px;
+  line-height: 80px;
+  color: white;
+}
+.arrowup{
+  padding: 10px 12px;
+  background: $primary;
+  border-radius: 5px;
+  position: fixed;
+  right: 5%;
+  bottom: 5%;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+  color: white;
+  &:hover{
+    background: $tertiary;
+  }
+  img{
+    max-width: 25px;
+  }
+}
+.banner{
+  background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('../images/home.jpg');
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  padding: 200px 0;
+  .container{
+    padding: 30px 0;
+    h1{
+      color: white;
+      font-size: 45px;
+      font-weight: 700;
+      text-shadow: 0 0 3px black;
+    }
+    h5{
+      color: white;
+      text-shadow: 0 0 3px black;
+      font-size: 25px;
+    }
+  }
+  
+}
+.contact{
+  .conbtn{
+    background: linear-gradient(0deg, rgba(43,200,153,1) 0%, rgba(96,113,186,1) 100%);
+    font-family: "Raleway", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 1px;
+    padding: 10px 28px;
+    border-radius: 4px;
+    transition: 0.5s;
+    color: #fff;
+    border: none;
+    &:hover{
+      background: transparent;
+      color: $primary;
+    }
+  }
+}
+.auth{
+  background: url('../images/bg.png');
+  background-position: center;
+  background-size: cover;
+  .container{
+    max-width: 99%;
+  }
+  .welcome{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    h1{
+      color: white;
+      font-family: 'Montserrat';
+      font-weight: lighter;
+      span{
+        font-weight: bold;
+      }
+    }
+  }
+  .col-sm-6{
+    margin-bottom: 0;
+    .title{
+      font-family: 'Montserrat';
+      font-size: 40px;
+      color: black;
+    }
+    .forgot{
+      color: black;
+    }
+    .card{
+      padding: 40px;
+      border-radius: 20px;
+      h3{
+        font-weight: bold;
+      }
+      form{
+        padding: 20px 0;
+      }
+      input{
+        border: none;
+        border-bottom: 1px solid #ddd;
+        padding: 10px 12px;
+        margin-bottom: 15px;
+      }
+      label{
+        margin: 5px 0;
+      }
+      .signin-btn{
+        background: black;
+        padding: 8px 30px;
+        border: 1px solid blue;
+        color: white;
+        border-radius: 50px;
+        margin: 20px 10px;
+      }
+      .sign-btn{
+        background: white;
+        padding: 8px 30px;
+        border: 1px solid black;
+        color: black;
+        margin: 20px  10px;
+        border-radius: 50px;
+      }
+    }
+  }
+}
+.register{
+  background: url('../images/periodic-table.png');
+  background-position: center;
+  background-size: cover;
+  .button-gr{
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .card-register{
+    margin-top: -40px;
+  }
+  form{
+    p{
+      text-align: center;
+      padding: 10px 40px;
+      font-size: 13px;
+      font-style: italic;
+    }
+    .already{
+      color: black;
+    }
+  }
+}
